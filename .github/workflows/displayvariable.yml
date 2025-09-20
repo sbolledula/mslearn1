@@ -1,11 +1,11 @@
 name: "Display Variable"
-run-name: ${{ github.workflow }} - ${{ github.ref }} - ${{ github.actor }}
+run-name: ${{ github.workflow }} - ${{ github.ref }} - ${{ github.actor }} - ${{ github.event_name }}
 on:
   push:
     branches-ignore:
       - main
 env:
-  MY_VARIABLE: "Sridhar's World"
+  MY_VARIABLE: "Sridhar's World on mybranch"
 jobs:
   display-variable:
     runs-on: ubuntu-latest
