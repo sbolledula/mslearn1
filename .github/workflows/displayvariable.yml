@@ -1,4 +1,5 @@
 name: "Display Variable"
+run-name: ${{ github.workflow }} - ${{ github.ref }} - ${{ github.actor}}
 on: [push]
 env:
   MY_VARIABLE: "Sridhar's World"
