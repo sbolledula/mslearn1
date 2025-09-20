@@ -1,0 +1,9 @@
+name: Caller Workflow
+on: [workflow_dispatch]
+jobs:
+  call-display-variable:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Display Variable Workflow
+        uses: ./.github/workflows/calledeworkflow.yml@mybranch
+
