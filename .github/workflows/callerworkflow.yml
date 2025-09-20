@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call Display Variable Workflow
-        uses: ./.github/workflows/calledeworkflow.yml@mybranch
+        uses: ./.github/workflows/calledeworkflow.yml@v1
 
