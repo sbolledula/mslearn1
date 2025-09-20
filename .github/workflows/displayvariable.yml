@@ -1,6 +1,9 @@
 name: "Display Variable"
-run-name: ${{ github.workflow }} - ${{ github.ref }} - ${{ github.actor}}
-on: [push]
+run-name: ${{ github.workflow }} - ${{ github.ref }} - ${{ github.actor }}
+on:
+  push:
+    branches-ignore:
+      - main
 env:
   MY_VARIABLE: "Sridhar's World"
 jobs:
