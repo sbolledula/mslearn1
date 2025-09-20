@@ -5,6 +5,7 @@ env:
 jobs:
   display-variable:
     runs-on: ubuntu-latest
+    container: ubuntu:latest
     steps:
       - name: Display Variable
         run: |
