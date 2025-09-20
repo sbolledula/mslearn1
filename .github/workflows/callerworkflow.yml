@@ -1,5 +1,5 @@
 name: Caller Workflow
-on: [workflow_dispatch]
+on: [push]
 jobs:
   call-display-variable:
     runs-on: ubuntu-latest
