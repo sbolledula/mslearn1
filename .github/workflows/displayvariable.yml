@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Display Variable
-        run: echo "The value of MY_VARIABLE is: $MY_VARIABLE"
+        run: echo "The value of MY_VARIABLE is: ${{env.MY_VARIABLE}}"
