@@ -1,5 +1,5 @@
 name: "Display Variable"
-run-name: ${{ github.workflow }} - ${{ github.ref }} - ${{ github.actor }} - ${{ github.event_name }}
+run-name: ${{ github.workflow }} - ${{ github.ref }} - ${{ github.actor }} - ${{ github.ref_name }}
 on:
   push:
     branches-ignore:
