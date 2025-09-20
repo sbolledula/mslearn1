@@ -4,6 +4,8 @@ jobs:
   call-display-variable:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v5
       - name: Call Display Variable Workflow
         uses: ./.github/workflows/calledeworkflow.yml@v1
 
