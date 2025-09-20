@@ -1,12 +1,7 @@
 name: "Display Variable"
-description: "A workflow to display a secret variable"
-authors: Sridhar
 on: [push]
-inputs:
-  MY_VARIABLE:
-    description: "A secret variable to display"
-    required: true
-    default: "default_valueMy World"
+env:
+  MY_VARIABLE: "Sridhar's World"
 jobs:
   display-variable:
     runs-on: ubuntu-latest
