@@ -1,0 +1,15 @@
+name: "Display Variable"
+description: "A workflow to display a secret variable"
+authors: Sridhar
+on: [push]
+inputs:
+  MY_VARIABLE:
+    description: "A secret variable to display"
+    required: true
+    default: "default_valueMy World"
+jobs:
+  display-variable:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Variable
+        run: echo "The value of MY_VARIABLE is: $MY_VARIABLE"
