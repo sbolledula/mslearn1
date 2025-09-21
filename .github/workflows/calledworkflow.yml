@@ -9,7 +9,7 @@ jobs:
         run: |
             echo "This is a placeholder for calling the Display Variable workflow."
       - name: Call Display Variable Workflow
+        uses: actions/checkout@v5
+      - name: List Files  
         run: |
-          actions@checkout@v5
           ls -l
-          with: {}
