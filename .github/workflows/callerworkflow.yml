@@ -2,6 +2,10 @@ name: Caller Workflow
 on: [push]
 jobs:
   call-display-variable:
+    strategy:
+     matrix:
+       target: [dev, intg, uat, prod]
     uses: ./.github/workflows/calledworkflow.yml
     with:
         input1: "value1Sridhar"
+        target: ${{ matrix.target }}
