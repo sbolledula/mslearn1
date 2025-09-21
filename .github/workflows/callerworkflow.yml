@@ -3,4 +3,5 @@ on: [push]
 jobs:
   call-display-variable:
     uses: ./.github/workflows/calledworkflow.yml
-    with: {}
+    with:
+        input1: "value1Sridhar"

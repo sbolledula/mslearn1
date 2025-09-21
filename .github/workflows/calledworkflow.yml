@@ -1,30 +1,23 @@
-name: Caller Workflow
-on: 
-    workflow_call:
-      inputs:
-        input1:
-          description: 'An example input'
-          required: true
-          type: string
-
+name: Called Workflow
+on:
+  workflow_call:
+    inputs:
+      input1:
+        description: 'An example input'
+        required: true
+        type: string
 
 jobs:
-  call-display-variable:
+  do-work:
     runs-on: ubuntu-latest
+    outputs:
+      message: ${{ steps.make_message.outputs.message }}
     steps:
-      - name: Call Display Variable Workflow
-        run: |
-            echo "This is a placeholder for calling the Display Variable workflow."
-            echo "${{ inputs.input1 }}"
-      - name: Call Display Variable Workflow
+      - name: Checkout
         uses: actions/checkout@v5
-      - name: List Files  
+
+      - id: make_message
+        name: Create message
         run: |
-          ls -l
-      - name: npm install
-        run: |
-          npm install
-          npm ci
-      - name: builfd
-        run: |
-          npm run build
+          echo "Received input: '${{ inputs.input1 }}'"
+          echo "::set-output name=message::Processed '${{ inputs.input1 }}'"
