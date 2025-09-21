@@ -1,6 +1,12 @@
 name: Caller Workflow
 on: 
-    workflow_call
+    workflow_call:
+      inputs:
+        input1:
+          description: 'An example input'
+          required: true
+          type: string
+
 
 jobs:
   call-display-variable:
