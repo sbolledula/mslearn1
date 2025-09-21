@@ -13,3 +13,10 @@ jobs:
       - name: List Files  
         run: |
           ls -l
+      - name: npm install
+        run: |
+          npm install
+          npm ci
+      - name: builfd
+        run: |
+          npm run build
