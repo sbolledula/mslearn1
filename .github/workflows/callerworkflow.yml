@@ -8,4 +8,3 @@ jobs:
     uses: ./.github/workflows/calledworkflow.yml
     with:
         input1: "value1Sridhar"
-        target: ${{ matrix.target }}
