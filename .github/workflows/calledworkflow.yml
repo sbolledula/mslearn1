@@ -1,6 +1,7 @@
 name: Caller Workflow
 on: 
     workflow_call
+
 jobs:
   call-display-variable:
     runs-on: ubuntu-latest
@@ -8,6 +9,7 @@ jobs:
       - name: Call Display Variable Workflow
         run: |
             echo "This is a placeholder for calling the Display Variable workflow."
+            echo "${{ inputs.input1 }}"
       - name: Call Display Variable Workflow
         uses: actions/checkout@v5
       - name: List Files  
