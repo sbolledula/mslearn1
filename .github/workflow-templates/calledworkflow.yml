@@ -1,0 +1,10 @@
+name: Caller Workflow
+on: 
+    workflow_call
+jobs:
+  call-display-variable:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Display Variable Workflow
+        run: |
+            echo "This is a placeholder for calling the Display Variable workflow."
